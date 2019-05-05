@@ -6,21 +6,34 @@
     <title>Adithya HJ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="./js/vue_file.js"></script>
     <script src="./js/main.js"></script>
+
 </head>
 <body>
         <section>
               </section>
-        <header>
-                <h1>Blog of some sort</h1>
-                <nav>
+	      <header >
+                <h1>Adithya's Blog</h1>
+		<nav class="nav">               
+		  <a href="./topics/ml/home.html">Journey in Machine Learning</a>
                   <a href=#>About</a>
-                </nav>
+		</nav>
               </header>
-              
-              <article>
-                    <h1>Making a text classifier using Embeddings</h1>
-                    <p>this is well known fact tha dsentiment snalysys apllictions have been on the srise drom a few years now</p>
+             <div id="mytile1">
+  <button @click="show = !show">
+    Toggle render
+  </button>
+  <transition name="slide-fade">
+    <p v-if="show">hello</p>
+
+
+              <article v-if="show">
+                    <h1>Built a sentiment classifier</h1>
+			 <p>Used GloVe word embeddings to train a RNN to classify texts into 5 classes, each representing the sentiment of the text</p>
                   </article>
+		  </transition>
+	     </div>
 </body>
 </html>
