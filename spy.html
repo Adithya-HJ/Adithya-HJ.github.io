@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scroll test</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        hr.vertical {
+            height: 100%;
+            /* you might need some positioning for this to work, see other questions about 100% height */
+            width: 0;
+            border: 3px solid rgb(160, 8, 8);
+        }
+
+        .sp {
+            display: inline-block;
+        }
+
+        .tes {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body class="container">
+    <script src="./js/jquery-3.3.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
+        async></script>
+
+    <div class="row">
+        <div class="col-5">
+            <p>
+                $$J(x) = {1 \over 2m } \sum_{i=1}^{m}(y_i-H(x_i))^2$$
+            </p>
+        </div>
+        <div class="col-3 offset-3">
+            <div class="float-right">
+                <div class="sp">
+                    <div>
+                        <span class="badge badge-dark badge-pill">Content</span>
+                        something
+                    </div>
+                    <hr class="vertical">
+                    <div class="sp">
+                        <div>
+                            <span class="badge badge-dark badge-pill">Content</span>
+                            something
+                        </div>
+                        <hr class="vertical">
+                        <div class="sp">
+                            <div>
+                                <span class="badge badge-dark badge-pill">Content</span>
+                                something
+                            </div>
+                            <hr class="vertical">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</body>
+
+</html>

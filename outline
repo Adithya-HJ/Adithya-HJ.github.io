@@ -1,0 +1,85 @@
+Adithya HJ
+for now due to lack of projects i'll focus on blog posts as main content
+
+i need more content, as there is none whatsoever
+    Simple understanding of Linear Regression
+        Glossary
+        a linear relationship
+        What is LR
+        Math behind LR
+        cost function
+        how to minimize the cost
+
+Linear Regression is not hard to grasp, its the simplest way to get started with machine learning, you can learn the concept and implement the algorithm from scratch easiely.
+What i'll be doing in this article is the simplest form of Linear Regression called Single variable Linear Regression
+i.e. we have to learn 2 variables from data.
+
+Lets understand what Linear Regression is,
+first lets get some terminology out of the way.
+    target variable : it is the variable we are trying to predict
+    independent variables: these are the datapoints we have, the values we have from which we have to train the model
+    dependent varaible: these are the vairables that have to be learned from data
+
+as you might know the equation of a line is of the form
+    y=(slope)*x+c
+    where 
+        c is the y-intercept
+        and slope is how steep the line is
+    
+    if we have values for slope and y-intercept, we can create any line
+    click here if you want to create some lines.
+
+    heres a python function for that equation
+
+    def line(x):
+        # we need values for slope and c
+        return slope*x+c 
+    
+    lets introduce some notation
+
+    in machine learning we refer to such equations as Hypothesis functions H
+    here slope and c are vaiables we need to learn, lets call them Q0 and Q1
+    so  that function becomes
+        H(x)=Q0.x+Q1
+        earlier it was
+        y=slope*x+c
+            where y was a function of x or f(x) now we just call it H(x), and x & c became Q0 & Q1
+    
+    as we don't know the best values for Q0 & Q1, we will initialize them randomly
+
+    here is a python function to evaluate our model
+    
+    def evaluate(x):
+        return Q0*x+Q1
+
+    now if we use the randomly initialized values of Q0 & Q1 to predict target variable, obviously it will not give good results. the only job we have is to find suitable values for dependent variables(Q0 & Q1). Lets see how we can do that.
+    to adjust Q0 & Q1 we need to know how much we need to change their values.
+
+    Lets welcome the cost function
+    the job of this function is to tell how bad our current Q0 & Q1 are.
+    there are many cost functions, lets see a simple one Mean Squared Error (MSE)
+
+    MSE can be writter in python as
+    def MSE(x,y):
+        error=y-evaluate(x) # should have been (y) but our model gave (evaluate(x))
+        error_squared=error**2
+        mse = error_squared.mean()/2
+        return mse
+        # devide y 2 is nothing special, just makes it easier( explained later)
+        #or return ((y-evaluate(x))**2).mean()/2
+
+    lets load synthetic dataset
+
+
+    now lets get output from our model (it'll not be good)
+
+    error=MSE(x,y)
+
+    now that we know how bad our model is, how do we make it better?
+    thats where we'll use gradient descent
+    its a simple algorithm
+
+    this involves simple calculus
+    we will be differentiating the cost function
+
+    the equation is (1/2)

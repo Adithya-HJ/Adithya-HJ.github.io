@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Linear Regression</title>
+    <link rel="stylesheet" href="./css/main.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/default.min.css">
+
+
+</head>
+
+<body data-spy="scroll" class="scrollspy-example z-depth-1 mt-4" data-target="#navbar-example3" data-offset="0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="https://cdnjs.com/libraries/Chart.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+    <div class="navbar navbar-dark bg-dark navbar-expand-sm fixed-top">
+        <a href="#" class="navbar-brand">Adithya</a>
+
+    </div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12 col-lg-10 post-text p-4">
+                <div class="mb-4">
+                    <h3 class="Hline"> Simple understanding of Linear Regression</h3>
+
+                </div>
+
+                <p>Linear Regression is not hard to grasp, its the simplest way to get started with machine learning,
+                    you
+                    can learn the concept and implement the algorithm from scratch easiely.</p>
+                <p>What i'll be doing in this article is the simplest form of Linear Regression called Single variable
+                    Linear Regression
+                    i.e. we have to learn 2 variables from data.
+                </p>
+                <p>
+                    Lets understand what Linear Regression is,
+                    first lets get some terminology out of the way.
+
+
+                </p>
+                <ul>
+                    <li> target variable : it is the variable we are trying to predict
+
+                    </li>
+                    <li>dependent varaible: these are the vairables that have to be learned from data</li>
+                    <li>independent variables: these are the datapoints we have, the values we have from which we have
+                        to
+                        train the model</li>
+                </ul>
+                <p>
+                    as you might know the equation of a line is of the form </p>
+                <equation> $$y={(slope)*x+c}$$</equation>
+                <div class="col-sm-12 col-8 offset-4 no-gutters">
+                    <p>
+                        where
+                    </p>
+                    <ul>
+                        <li>c is the y-intercept, and</li>
+                        <li>slope is how steep the line is</li>
+                    </ul>
+                </div>
+
+                <p>
+                    if we have values for slope and y-intercept, we can create any line
+                </p>
+                <div class="col-8 pycode">
+                    <pre class="prettyprint lang-python ">
+def line(x):
+    # we need values for slope and c
+    return slope*x+c 
+</pre>
+                </div>
+                <!-- <div id="lr_plot" style="width:600px; height:400px;"></div> -->
+
+                <p>
+                    lets introduce some notation
+
+                    in machine learning we refer to such equations as Hypothesis functions H
+                    here slope and c are vaiables we need to learn, lets call them Q0 and Q1
+                    so that function becomes
+                    $$H(x)=Q0.x+Q1$$
+                    it is equivalent to
+                    $$y=slope*x+c$$
+
+                </p>
+                <p> as we don't know the best values for Q0 & Q1, we will initialize them randomly
+                </p>
+                <div class="col-8 pycode">
+                    <pre class="prettyprint lang-python ">
+def evaluate(x):
+    return Q0*x+Q1                         
+                    </pre>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

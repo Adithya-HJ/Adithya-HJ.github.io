@@ -1,0 +1,100 @@
+.row {
+    border: 1px solid silver;
+}
+
+body {
+    position: relative;
+    /* required */
+    padding-top: 70px;
+}
+
+/* 
+.scrollspy-example {
+    overflow-y: scroll;
+    height: 100vh;
+} */
+
+#navbar-example3 {
+    position: sticky;
+    /* Supported in latest version of Chrome, Firefox, Safari, Opera and Edge browsers */
+    top: 15px;
+}
+
+.post-text {
+    color: black;
+    line-height: 1.5rem;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#lr_plot {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+equation {
+    align-content: center;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    width: inherit;
+}
+
+.pycode {
+    /* align-content: center; */
+    /* align-items: center; */
+    /* display: inline-block; */
+    /* width: 50%; */
+    /* background: #f3efef; */
+    /* border: none; */
+    padding: 0%;
+    margin: 0%;
+}
+
+li.L0, li.L1, li.L2, li.L3,
+li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: decimal !important;
+}
+
+.linenums li {
+    list-style-type: decimal;
+}
+/* .pycode:hover{
+    border-style:  solid;
+    border-width: rgb(35, 44, 73) 3px;
+} */
+
+.Hline {
+    position: relative;
+    color:#29B6F6;
+    text-decoration: none;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.Hline:hover {
+    color:#5C6BC0;
+}
+
+.Hline:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: #5C6BC0;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.Hline:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
